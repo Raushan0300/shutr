@@ -1,0 +1,129 @@
+.profilBody {
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.profileBody1,
+.profileBody2,
+.profileBody3 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), -5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 30%;
+}
+.profileContent1,
+.profileContent3,
+.profileContent5 {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.profileContent2,
+.profileContent4,
+.profileContent6 {
+  margin-left: 20px;
+  margin-top: 25px;
+  font-size: 24px;
+  font-weight: 900;
+}
+.profileData {
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+.profilePost {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-evenly;
+}
+.profilePostCard1,
+.profilePostCard2,
+.profilePostCard3 {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), -5px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 30%;
+}
+.postContent1,
+.postContent2,
+.postContent3 {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.postData1,
+.postData2,
+.postData3 {
+  margin-left: 20px;
+  margin-top: 25px;
+  font-size: 24px;
+  font-weight: 900;
+}
+.postInfo1,
+.postInfo2,
+.postInfo3 {
+  margin-left: 20px;
+}
+
+.postPicture {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 45%;
+  padding-top: 10px;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.card-content p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .profileBody1,
+  .profileBody2,
+  .profileBody3 {
+    width: 100%;
+  }
+  .profilePostCard1,
+  .profilePostCard2,
+  .profilePostCard3 {
+    width: 100%;
+  }
+}

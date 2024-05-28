@@ -1,0 +1,104 @@
+.signupMainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F3F4F6;
+}
+.signupLogoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.signupHeadText{
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+}
+.signupSignText{
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #111827;
+}
+.signupOrText{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #4B5563;
+}
+.signupOrSpan{
+    color: #6259E7;
+    cursor: pointer;
+}
+.signupForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.signupInput{
+    width: 30vw;
+    padding: 10px;
+    outline: none;
+}
+.signupInputEmail{
+    border-top: none;
+    border-left: 1px solid #D1D5DA;
+    border-right: 1px solid #D1D5DA;
+    border-bottom: none
+}
+.signupInputPass{
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #D1D5DA;
+    border-left: 1px solid #D1D5DA;
+    border-right: 1px solid #D1D5DA;
+    border-bottom: 1px solid #D1D5DA;
+}
+.signupInputFName{
+    border-radius: 5px 5px 0 0;
+    border-top: 1px solid #D1D5DA;
+    border-left: 1px solid #D1D5DA;
+    border-right: 1px solid #D1D5DA;
+    border-bottom: none;
+    margin-top: 10px;
+}
+.signupInputLName{
+    border-top: 1px solid #D1D5DA;
+    border-left: 1px solid #D1D5DA;
+    border-right: 1px solid #D1D5DA;
+    border-bottom: 1px solid #D1D5DA;
+}
+.signupInput:focus{
+    border: 1px solid #6259E7;
+}
+.signupInput::placeholder{
+    color: #D1D5DA;
+}
+.signupButton{
+    width: calc(30vw + 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6259E7;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .signupInput{
+        width: 80vw;
+    }
+    .signupButton{
+        width: calc(80vw + 20px);
+    }
+    
+}
