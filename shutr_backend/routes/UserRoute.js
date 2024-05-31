@@ -5,6 +5,10 @@ const router = express.Router();
 
 const User = require("../models/Users");
 
+const code = () => {
+  return Math.floor(100000 + Math.random() * 900000);
+};
+
 router.post("/signup", async (req, res) => {
   const { name, email, password } = req.body;
   try {
@@ -61,10 +65,15 @@ router.post("/forgot", async (req, res) => {
   const { email } = req.body;
   try {
     const user = await User.findOne({ email });
+    const codeValue = code();
     if (user) {
       res
         .status(200)
-        .json({ err: false, message: "Email sent to your email address" });
+        .json({
+          err: false,
+          message: "Email sent to your email address",
+          code: codeValue,
+        });
     } else {
       res.status(400).json({ err: true, message: "User not found" });
     }
@@ -74,16 +83,18 @@ router.post("/forgot", async (req, res) => {
 });
 
 router.put("/reset", async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, code } = req.body;
   try {
     const user = await User.findOne({ email });
     if (user) {
-      const salt = await bcrypt.genSalt(10);
-      const hash = await bcrypt.hash(password, salt);
-      await User.updateOne({ email }, { password: hash });
-      res
-        .status(200)
-        .json({ err: false, message: "Password reset successfully" });
+      if (code === code) {
+        const salt = await bcrypt.genSalt(10);
+        const hash = await bcrypt.hash(password, salt);
+        await User.updateOne({ email }, { password: hash });
+        res
+          .status(200)
+          .json({ err: false, message: "Password reset successfully" });
+      }
     } else {
       res.status(400).json({ err: true, message: "User not found" });
     }
