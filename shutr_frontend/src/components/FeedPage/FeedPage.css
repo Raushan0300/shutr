@@ -1,0 +1,70 @@
+.feedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  padding: 2vh 3vw;
+}
+.feedHeader {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.feedProfilePic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feedName {
+  font-size: 16px;
+  font-weight: 500;
+}
+.feedPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.feedPostPic {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.feedFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  border-top: 1px solid #dbdbdb;
+}
+.feedLike {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feedComment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feedShare {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feedTime {
+  font-size: 12px;
+  color: #6b7280;
+}
